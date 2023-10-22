@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Roboto:ital,wght@0,700;1,100&display=swap');
+
+:root {
+    --default-size: 24px;
+    --small-size: 18px;
+    --big-size: 28px;
+    --color: #9C0304;
+}
+
+body,select,button {
+    font-size: var(--small-size);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color);
+    background-color: white;
+}
+header{
+    text-align: center;
+    font-size: var(--big-size);
+    padding: 32px 0;
+    font-weight: 500;
+    margin-bottom: 4rem;
+    border-bottom: 1px solid var(--color);
+}
+main {
+    width: 1000px;
+    margin: 0 5% 0 23%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    width: 100%;
+}
+
+.product {
+    align-items: center;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+}
+
+input {
+    font-size: var(--small-size);
+    width: 100%; /* Set the width to 100% */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    margin-left: 10px; /* Add some space between the label and the input */
+    border: 1px solid var(--color);
+    text-align: right;
+    color: var(--color);
+}
+
+.category{
+    font-weight: 600;
+    margin-right: 4px;
+}
+
+select{
+    margin-bottom: 5rem;  
+    border: 1px solid var(--color);
+}
+
+.product-image {
+    width: 160px; /* Set a fixed width */
+    height: 60px; /* Set a fixed height */
+    overflow: hidden; /* Hide any overflow if the image is larger than the container */
+}
+  
+.product-image img {
+    width: 100%; /* Make the image fill the container's width */
+    height: 100%; /* Make the image fill the container's height */
+    object-fit: cover; /* Maintain aspect ratio, cover the container */
+}
+
+button.submit{
+    float: right;
+    padding: 0 1rem;
+    color: white;
+    background-color: var(--color);
+    border: 1px solid var(--color);
+    transition: .5s;
+    margin-top: 2rem;
+}
+
+button.submit:hover{
+    background-color: transparent;
+    color: var(--color);
+}
+
+aside{
+    position: fixed;
+    top: 7.5rem;
+    height: 700px;
+    padding: 0;
+    font-weight: 600;
+    text-align: center;
+    padding: 0 1rem;
+}
+aside ul, li{
+    font-weight: 400;
+    list-style-type:none;
+    text-align: left;
+}
+
+span.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+.basket{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.basket li {
+    font-weight: 600;
+    margin-right: 10px;
+}
+p span{
+    font-weight: 400;
+}
+

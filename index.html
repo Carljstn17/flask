@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Drink Shop</title>
+</head>
+<body>
+    <header>Take Order</header>
+
+    <aside>
+        <div id="basket">
+            <div class="basket">
+            <li class="material-symbols-outlined">shopping_basket</li><li>Your Basket</li></div>
+            <ul id="basket-items"></ul>
+            <p id="total"><span>Total: </span>$0</p>
+        </div>
+    </aside>
+
+    <main>
+        <div class="label">
+            <label for="category" class="category">Category</label>
+            <select id="category" onchange="changeCategory()">
+                <option value="mineral">Mineral</option>
+                <option value="soda">Soda</option>
+                <option value="juice">Juice</option>
+                <option value="sports">Sports Drink</option>
+            </select>
+        </div>
+
+        <div id="mineralForm">
+        <form action="" id="mineral" method="post">
+
+            <div class="grid-container">
+                <div class="container">
+                <div class="product">
+                    <label for="m1">₱15&nbsp;Summit</label>
+                    <input type="number" name="m1" id="product1" min="1" value="0" onchange="addToBasket('Summit', 'product1', 15)">
+                </div>
+                
+                <div class="product">
+                    <label for="m2">₱15&nbsp;Nature&nbsp;Spring</label>
+                    <input type="number" name="m2" id="product2" min="1" value="0" onchange="addToBasket('Spring', 'product2', 15)">
+                </div>
+
+                <div class="product">
+                    <label for="m3">₱18&nbsp;Premier</label>
+                    <input type="number" name="m3" id="product3" min="1" value="0" onchange="addToBasket('Premier', 'product3', 18)">
+                </div>
+            </div>
+            <div class="container">
+                <div class="product">               
+                    <label for="m4">₱20&nbsp;Absolute</label>
+                    <input type="number" name="m4" id="product4" min="1" value="0" onchange="addToBasket('Absolute', 'product4', 20)">
+                </div>
+
+                <div class="product">
+                    <label for="m5">₱25&nbsp;Evian</label>
+                    <input type="number" name="m5" id="product5" min="1" value="0" onchange="addToBasket('Evian', 'product5', 25)">
+                </div>
+
+                <div class="product">               
+                    <label for="m6">₱20&nbsp;Le&nbsp;Minarale</label>
+                    <input type="number" name="m6" id="product6" min="1" value="0" onchange="addToBasket('Minarale', 'product6', 20)">
+                </div>
+            </div>
+        </div>
+
+        </form>
+    </div>
+
+
+
+
+
+    <div id="sodaForm" style="display:none;">
+        <form action="" id="soda" method="post">
+
+            <div class="grid-container">
+                <div class="container">
+                <div class="product">
+                    <label for="s1">₱15&nbsp;Coca~Cola</label>
+                    <input type="number" name="s1" id="product7" min="1" value="0" onchange="addToBasket('Cola', 'product7', 15)">
+                </div>
+                
+                <div class="product">
+                    <label for="s2">₱15&nbsp;Mountain&nbsp;Dew</label>
+                    <input type="number" name="s2" id="product8" min="1" value="0" onchange="addToBasket('Dew', 'product8', 15)">
+                </div>
+
+                <div class="product">
+                    <label for="s3">₱20&nbsp;Root&nbsp;Beer</label>
+                    <input type="number" name="s3" id="product9" min="1" value="0" onchange="addToBasket('Root', 'product9', 20)">
+                </div>
+            </div>
+            <div class="container">
+                <div class="product">               
+                    <label for="s4">₱15&nbsp;Sprite</label>
+                    <input type="number" name="s4" id="product10" min="1" value="0" onchange="addToBasket('Sprite', 'product10', 15)">
+                </div>
+
+                <div class="product">
+                    <label for="s5">₱15&nbsp;Royal</label>
+                    <input type="number" name="s5" id="product11" min="1" value="0" onchange="addToBasket('Royal', 'product11', 15)">
+                </div>
+
+                <div class="product">               
+                    <label for="s6">₱15&nbsp;Pepsi</label>
+                    <input type="number" name="s6" id="product12" min="1" value="0" onchange="addToBasket('Pepsi', 'product12', 15)">
+                </div>
+            </div>
+        </div>
+
+        </form>
+    </div>
+
+
+
+
+    <div id="juiceForm" style="display:none;">
+        <form action="" id="juice" method="post">
+
+            <div class="grid-container">
+                <div class="container">
+                <div class="product">
+                    <label for="j1">₱20&nbsp;Tropicana</label>
+                    <input type="number" name="j1" id="product13" min="1" value="0" onchange="addToBasket('Tropicana', 'product13', 20)">
+                </div>
+                
+                <div class="product">
+                    <label for="j2">₱20&nbsp;Selecta&nbsp;Moo</label>
+                    <input type="number" name="j2" id="product14" min="1" value="0" onchange="addToBasket('Selecta', 'product14', 20)">
+                </div>
+
+                <div class="product">
+                    <label for="j3">₱20&nbsp;Del&nbsp;Monte</label>
+                    <input type="number" name="j3" id="product15" min="1" value="0" onchange="addToBasket('DelMonte', 'product15', 20)">
+                </div>
+            </div>
+            <div class="container">
+                <div class="product">               
+                    <label for="j4">₱15&nbsp;Zest~O</label>
+                    <input type="number" name="j4" id="product16" min="1" value="0" onchange="addToBasket('ZestO', 'product16', 15)">
+                </div>
+
+                <div class="product">
+                    <label for="j5">₱18&nbsp;Zest~O&nbsp;Choco</label>
+                    <input type="number" name="j5" id="product17" min="1" value="0" onchange="addToBasket('Choco', 'product17', 18)">
+                </div>
+
+                <div class="product">               
+                    <label for="j6">₱15&nbsp;Ri~Chee</label>
+                    <input type="number" name="j6" id="product18" min="1" value="0" onchange="addToBasket('Richee', 'product18', 15)">
+                </div>
+            </div>
+        </div>
+
+        </form>
+    </div>
+
+
+
+
+
+    <div id="sportsForm" style="display:none;">
+        <form action="" id="sports" method="post">
+
+            <div class="grid-container">
+                <div class="container">
+                <div class="product">
+                    <label for="sd1">₱25&nbsp;Gatorade</label>
+                    <input type="number" name="sd1" id="product19" min="1" value="0" onchange="addToBasket('Gatorade', 'product19', 25)">
+                </div>
+                
+                <div class="product">
+                    <label for="sd2">₱20&nbsp;Pocari</label>
+                    <input type="number" name="sd2" id="product20" min="1" value="0" onchange="addToBasket('Pocari', 'product20', 20)">
+                </div>
+
+                <div class="product">
+                    <label for="sd3">₱25&nbsp;Powerade</label>
+                    <input type="number" name="sd3" id="product21" min="1" value="0" onchange="addToBasket('Powerade', 'product21', 25)">
+                </div>
+            </div>
+            <div class="container">
+                <div class="product">               
+                    <label for="sd4">₱18&nbsp;Sting</label>
+                    <input type="number" name="sd4" id="product22" min="1" value="0" onchange="addToBasket('Sting', 'product22', 18)">
+                </div>
+
+                <div class="product">
+                    <label for="sd5">₱18&nbsp;Cobra</label>
+                    <input type="number" name="sd5" id="product23" min="1" value="0" onchange="addToBasket('Cobra', 'product23', 18)">
+                </div>
+
+                <div class="product">               
+                    <label for="sd6">₱18&nbsp;Mizone</label>
+                    <input type="number" name="sd6" id="product24" min="1" value="0" onchange="addToBasket('Mizone', 'product24', 18)">
+                </div>
+            </div>
+        </div>
+
+        </form>
+    </div>
+    </main>
+
+    <footer>
+        <button type="button" class="submit" onclick="submitOrder()">Sell</button>
+    </footer>
+
+    <script>
+        function changeCategory() {
+            var category = document.getElementById("category").value;
+            var mineralForm = document.getElementById("mineralForm");
+            var sodaForm = document.getElementById("sodaForm");
+            var juiceForm = document.getElementById("juiceForm");
+            var sportsForm = document.getElementById("sportsForm");
+        
+            // Hide all forms
+            mineralForm.style.display = "none";
+            sodaForm.style.display = "none";
+            juiceForm.style.display = "none";
+            sportsForm.style.display = "none";
+        
+            // Show the selected form
+            if (category === "mineral") {
+                mineralForm.style.display = "block";
+            } else if (category === "soda") {
+                sodaForm.style.display = "block";
+            } else if (category === "juice") {
+                juiceForm.style.display = "block";
+            } else if (category === "sports") {
+                sportsForm.style.display = "block";
+            }
+        }
+        </script>
+
+    
+    <script>
+
+        var prices = {
+                Summit: 15, Spring: 15, Premier: 18, Absolute: 20, Evian: 25, Minarale: 20,
+                Cola: 15, Dew: 15, Root: 20, Sprite: 15, Royal: 15, Pepsi: 15,
+                Tropicana: 20, Selecta: 20, DelMonte: 20, ZestO: 15, Choco: 18, Richee: 15,
+                Gatorade: 25, Pocari: 20, Powerade: 25, Sting: 18, Cobra: 18, Mizone: 18
+            };
+
+        var basketItems = document.getElementById("basket-items");
+
+        function addToBasket(productName, quantityId, price) {
+            console.log(productName, quantityId, price);
+            var quantity = parseInt(document.getElementById(quantityId).value);
+            var listItem = null;
+
+            var existingItem = Array.from(basketItems.children).find(function(item) {
+                return item.textContent.includes(productName);
+            });
+
+            if (existingItem) {
+                existingItem.textContent = productName + " (" + quantity + ")";
+            } else {
+                listItem = document.createElement("li");
+                listItem.textContent = productName + " (" + quantity + ")";
+                basketItems.appendChild(listItem);
+            }
+
+            var total = 0;
+            Array.from(basketItems.children).forEach(function(item) {
+                var matches = item.textContent.match(/(\d+)/);
+                if (matches) {
+                    var quantity = parseInt(matches[0]);
+                    var productPrice = prices[productName];
+                    total += quantity * productPrice;
+                }
+            });
+
+            document.getElementById("total").textContent = "Total: ₱" + total;
+        }
+    </script>
+
+    <script>
+        var basketItems = document.getElementById("basket-items");
+        
+        function submitOrder() {
+            
+            var totalQuantity = 0;
+            var totalPrice = 0;
+
+            Array.from(basketItems.children).forEach(function(item) {
+                var matches = item.textContent.match(/(\d+)/);
+
+                if (matches) {
+                    var quantity = parseInt(matches[0]);
+                    var productName = item.textContent.split(" ")[1];
+                    var productPrice = prices[productName];
+
+                    totalQuantity += quantity;
+                    totalPrice += quantity * productPrice;
+                }
+            });
+
+            var orderDetails = encodeURIComponent(JSON.stringify({
+                quantity: totalQuantity,
+                price: totalPrice
+            }));
+
+            window.location.href = 'receipt.html?order=' + orderDetails;
+        }
+    </script>
+</body>
+</html>
